@@ -1,7 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Domain.Contracts.Repositories;
+using Domain.Contracts.Services;
+using Domain.Service;
+using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -16,6 +16,12 @@ namespace Host.Api
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<ICompanyRepository, CompanyRepository>();
+            services.AddScoped<ILitigationRepository, LitigationRepository>();
+
+            services.AddScoped<ICompanyDomainService, CompanyDomainService>();
+            services.AddScoped<ILitigationDomainService, LitigationDomainService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
