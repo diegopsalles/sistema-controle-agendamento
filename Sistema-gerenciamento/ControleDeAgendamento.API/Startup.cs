@@ -16,8 +16,8 @@ namespace ControleDeAgendamento.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            
             services.InvokeDIFactory();
+            services.ConfigEntityFramework();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ControleDeAgendamento.API", Version = "v1" });
@@ -39,7 +39,6 @@ namespace ControleDeAgendamento.API
             app.UseRouting();
 
             app.UseAuthorization();
-
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
