@@ -1,11 +1,8 @@
-﻿using Domain.Entities;
+﻿using ControleDeAgendamento.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Reflection;
-using System.Text;
 
-namespace Infrastructure.Contexts
+namespace ControleDeAgendamento.Repository.Contexts
 {
     public class ApplicationDbContext : DbContext
     {

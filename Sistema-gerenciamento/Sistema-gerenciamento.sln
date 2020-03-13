@@ -11,13 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Domain.Layer", "3-Domain.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Infrastructure.Layer", "4-Infrastructure.Layer", "{BFDB809B-2F77-4D0D-BD10-768F70CF91EA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{370D9F46-A66A-447F-93F2-47F49578C977}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleDeAgendamento.API", "ControleDeAgendamento.API\ControleDeAgendamento.API.csproj", "{0C7258E9-AF32-4478-ACD9-0AABA8A47FCB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{6F01FBDF-BBCC-4C88-883C-517765BAD850}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleDeAgendamento.Repository", "ControleDeAgendamento.Repository\ControleDeAgendamento.Repository.csproj", "{461B1763-29CC-451A-93F4-90E177D2DB9F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{059B604E-EF78-47DA-B95F-78BE6F38FCE1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleDeAgendamento.Domain", "ControleDeAgendamento.Domain\ControleDeAgendamento.Domain.csproj", "{E5A0B31B-5DE8-485F-BD51-B467F9C4594E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host.Api", "Host.Api\Host.Api.csproj", "{92EDC8F5-E59F-4C10-A904-57FA22C59A7F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleDeAgendamento.Repository.CrossCutting", "ControleDeAgendamento.Repository.CrossCutting\ControleDeAgendamento.Repository.CrossCutting.csproj", "{0D644626-93CC-4AB8-82FB-11C30590C2A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleDeAgendamento.ApplicationService", "ControleDeAgendamento.ApplicationService\ControleDeAgendamento.ApplicationService.csproj", "{6DCD2F30-3A35-468A-B19D-16E7722BA0BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,31 +27,36 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{370D9F46-A66A-447F-93F2-47F49578C977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{370D9F46-A66A-447F-93F2-47F49578C977}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{370D9F46-A66A-447F-93F2-47F49578C977}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{370D9F46-A66A-447F-93F2-47F49578C977}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6F01FBDF-BBCC-4C88-883C-517765BAD850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F01FBDF-BBCC-4C88-883C-517765BAD850}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F01FBDF-BBCC-4C88-883C-517765BAD850}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F01FBDF-BBCC-4C88-883C-517765BAD850}.Release|Any CPU.Build.0 = Release|Any CPU
-		{059B604E-EF78-47DA-B95F-78BE6F38FCE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{059B604E-EF78-47DA-B95F-78BE6F38FCE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{059B604E-EF78-47DA-B95F-78BE6F38FCE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{059B604E-EF78-47DA-B95F-78BE6F38FCE1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{92EDC8F5-E59F-4C10-A904-57FA22C59A7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{92EDC8F5-E59F-4C10-A904-57FA22C59A7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{92EDC8F5-E59F-4C10-A904-57FA22C59A7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{92EDC8F5-E59F-4C10-A904-57FA22C59A7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C7258E9-AF32-4478-ACD9-0AABA8A47FCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C7258E9-AF32-4478-ACD9-0AABA8A47FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C7258E9-AF32-4478-ACD9-0AABA8A47FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C7258E9-AF32-4478-ACD9-0AABA8A47FCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{461B1763-29CC-451A-93F4-90E177D2DB9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{461B1763-29CC-451A-93F4-90E177D2DB9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{461B1763-29CC-451A-93F4-90E177D2DB9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{461B1763-29CC-451A-93F4-90E177D2DB9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5A0B31B-5DE8-485F-BD51-B467F9C4594E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5A0B31B-5DE8-485F-BD51-B467F9C4594E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5A0B31B-5DE8-485F-BD51-B467F9C4594E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5A0B31B-5DE8-485F-BD51-B467F9C4594E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D644626-93CC-4AB8-82FB-11C30590C2A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D644626-93CC-4AB8-82FB-11C30590C2A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D644626-93CC-4AB8-82FB-11C30590C2A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D644626-93CC-4AB8-82FB-11C30590C2A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DCD2F30-3A35-468A-B19D-16E7722BA0BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DCD2F30-3A35-468A-B19D-16E7722BA0BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DCD2F30-3A35-468A-B19D-16E7722BA0BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DCD2F30-3A35-468A-B19D-16E7722BA0BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{370D9F46-A66A-447F-93F2-47F49578C977} = {0D5688E6-E80D-43D1-A841-3A5CA35554A3}
-		{6F01FBDF-BBCC-4C88-883C-517765BAD850} = {84E77C7B-881C-467F-8B0C-8CBCBB1CF41A}
-		{059B604E-EF78-47DA-B95F-78BE6F38FCE1} = {BFDB809B-2F77-4D0D-BD10-768F70CF91EA}
-		{92EDC8F5-E59F-4C10-A904-57FA22C59A7F} = {ADA9E2B6-65DB-4F0C-9786-6737E23FAD2C}
+		{0C7258E9-AF32-4478-ACD9-0AABA8A47FCB} = {ADA9E2B6-65DB-4F0C-9786-6737E23FAD2C}
+		{461B1763-29CC-451A-93F4-90E177D2DB9F} = {BFDB809B-2F77-4D0D-BD10-768F70CF91EA}
+		{E5A0B31B-5DE8-485F-BD51-B467F9C4594E} = {84E77C7B-881C-467F-8B0C-8CBCBB1CF41A}
+		{0D644626-93CC-4AB8-82FB-11C30590C2A5} = {BFDB809B-2F77-4D0D-BD10-768F70CF91EA}
+		{6DCD2F30-3A35-468A-B19D-16E7722BA0BB} = {0D5688E6-E80D-43D1-A841-3A5CA35554A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {726B5715-7E50-4126-B8DF-60DD61D26E3E}
