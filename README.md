@@ -22,4 +22,4 @@ O sistema deve cadastrar as informações do cliente, como nome, cnpj e estado e
 ## Instalação
 Só realizar o git clone do projeto
 
-```git clone https://github.com/diegopsalles/Desafio.git```
+```git clone https://github.com/diegopsalles/sistema-controle-agendamento```
