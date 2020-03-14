@@ -43,7 +43,7 @@ namespace ControleDeAgendamento.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int?>("CompanyId")
+                    b.Property<int>("CompanyId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Date")
@@ -59,7 +59,7 @@ namespace ControleDeAgendamento.Repository.Migrations
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<decimal>("ValueProcess")
-                        .HasColumnType("decimal(65,2)");
+                        .HasColumnType("decimal(65,30)");
 
                     b.HasKey("Id");
 
@@ -72,7 +72,9 @@ namespace ControleDeAgendamento.Repository.Migrations
                 {
                     b.HasOne("ControleDeAgendamento.Domain.Entities.Company", "Company")
                         .WithMany("Litigation")
-                        .HasForeignKey("CompanyId");
+                        .HasForeignKey("CompanyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

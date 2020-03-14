@@ -34,7 +34,7 @@ namespace ControleDeAgendamento.Repository.Migrations
                     State = table.Column<string>(nullable: true),
                     Date = table.Column<DateTime>(nullable: false),
                     IsActive = table.Column<bool>(nullable: false),
-                    CompanyId = table.Column<int>(nullable: true)
+                    CompanyId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -44,7 +44,7 @@ namespace ControleDeAgendamento.Repository.Migrations
                         column: x => x.CompanyId,
                         principalTable: "Company",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

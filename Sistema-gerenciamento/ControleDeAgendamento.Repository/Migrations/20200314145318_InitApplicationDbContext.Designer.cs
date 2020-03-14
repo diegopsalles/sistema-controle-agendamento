@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ControleDeAgendamento.Repository.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200312184341_InitApplicationDbContext")]
+    [Migration("20200314145318_InitApplicationDbContext")]
     partial class InitApplicationDbContext
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -45,7 +45,7 @@ namespace ControleDeAgendamento.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int?>("CompanyId")
+                    b.Property<int>("CompanyId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Date")
@@ -74,7 +74,9 @@ namespace ControleDeAgendamento.Repository.Migrations
                 {
                     b.HasOne("ControleDeAgendamento.Domain.Entities.Company", "Company")
                         .WithMany("Litigation")
-                        .HasForeignKey("CompanyId");
+                        .HasForeignKey("CompanyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
