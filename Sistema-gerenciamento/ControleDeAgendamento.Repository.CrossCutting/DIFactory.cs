@@ -39,7 +39,7 @@ namespace ControleDeAgendamento.Repository.CrossCutting
         
         public static void ConfigEntityFramework(this IServiceCollection services) 
         {
-            string strConnection = @"Server=ecommerce-allied-db1.cqpou5y4xe1k.us-east-1.rds.amazonaws.com;Port=3306;Database=db_p_oi;Uid=usr_oi;Pwd=BNV73g5U;persistsecurityinfo=True;SslMode=none;";
+            string strConnection = @"Server = MYSQL5025.site4now.net; Database = db_a5644e_desafio; Uid = a5644e_desafio; Pwd = 290665Diego*";
 
             services.AddDbContext<ApplicationDbContext>(o => o.UseMySql(strConnection));
         }
